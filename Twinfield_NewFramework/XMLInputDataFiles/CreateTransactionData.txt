@@ -1,0 +1,21 @@
+﻿        <transaction destiny="{transactionStatus}" raisewarning="false">
+          <header>
+<code>{Code}</code>
+<office>{Office}</office>
+            <date>{TranDate}</date>
+            <invoicenumber>{InvoiceNumber}</invoicenumber>
+          </header>
+          <lines>
+            <line type="total">
+              <dim1>1300</dim1>
+              <dim2>1011</dim2>
+              <value>100</value>
+              <debitcredit>debit</debitcredit>
+            </line>
+            <line type="detail">
+              <dim1>0110</dim1>
+              <value>100</value>
+              <debitcredit>credit</debitcredit>
+            </line>
+          </lines>
+        </transaction>

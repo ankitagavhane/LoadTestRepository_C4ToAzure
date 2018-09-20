@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1321053D-C92D-46EF-9573-30BB12C699D9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Twinfield_NewFramework</RootNamespace>
+    <AssemblyName>Twinfield_NewFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TestProjectType>WebTest</TestProjectType>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.LoadTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualStudio.QualityTools.WebTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="RTMonitor, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>RTMonitor\RTMonitor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Xml.Serialization" />
+  </ItemGroup>
+  <ItemGroup>
+    <CodeAnalysisDependentAssemblyPaths Condition=" '$(VS100COMNTOOLS)' != '' " Include="$(VS100COMNTOOLS)..\IDE\PrivateAssemblies">
+      <Visible>False</Visible>
+    </CodeAnalysisDependentAssemblyPaths>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LoadTestPlugin\CompanyClass.cs" />
+    <Compile Include="LoadTestPlugin\JSonHelper.cs" />
+    <Compile Include="Scripts\NeoFixedAsset.cs" />
+    <Compile Include="Scripts\NeoSalesInvoices.cs" />
+    <Compile Include="Scripts\ClassicSalesInvoices.cs" />
+    <Compile Include="Scripts\CreateTransaction.cs" />
+    <Compile Include="Scripts\ReadTransaction.cs" />
+    <Compile Include="Scripts\UserAccessSettings.cs" />
+    <Compile Include="Scripts\DocumentManagement.cs" />
+    <Compile Include="Scripts\PayAndCollectRun.cs" />
+    <Compile Include="Scripts\ExportCustomers.cs" />
+    <Compile Include="Scripts\ExtendedTBReport.cs" />
+    <Compile Include="Scripts\CompanySettings.cs" />
+    <Compile Include="Scripts\CreateInvoice.cs" />
+    <None Include="app.config" />
+    <Compile Include="LoadTestPlugin\UserBasedPlugin.cs" />
+    <Compile Include="MiscFiles\AssemblyLoad.cs" />
+    <Compile Include="MiscFiles\Common.cs" />
+    <Compile Include="MiscFiles\CommonLibrary.cs" />
+    <Compile Include="MiscFiles\CustomBinding_newapproach_dyn_distribution_7A_original.cs" />
+    <Compile Include="MiscFiles\LT2010Class.cs" />
+    <Compile Include="MiscFiles\Scenario.cs" />
+    <Compile Include="MiscFiles\ScenarioDataList.cs" />
+    <Compile Include="MiscFiles\ScenarioPrefix.cs" />
+    <Compile Include="MiscFiles\TableTypeClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Config\LoadTestSettings.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LoadTestFiles\NoLoad\ExtendedTBReport.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LoadTestFiles\NoLoad\NeoFixedAsset.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LoadTestFiles\NoLoad\NeoSalesInvoices.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LoadTestFiles\NoLoad\ClassicSalesInvoices.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LoadTestFiles\NoLoad\CreateTransaction.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LoadTestFiles\NoLoad\ReadTransaction.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LoadTestFiles\NoLoad\UserAccessSettings.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LoadTestFiles\NoLoad\DocumentManagement.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LoadTestFiles\NoLoad\PayAndCollectRun.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LoadTestFiles\NoLoad\ExportCustomers.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LoadTestFiles\NoLoad\CompanySettings.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="LoadTestFiles\NoLoad\CreateInvoice.loadtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="RTMonitor\r.rtf" />
+    <None Include="RTMonitor\rt1.rtf" />
+    <None Include="WebTest\PayAndCollectRun.webtest">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="LoadTestFiles\SuiteMix\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="InputFiles\ImportFiles\File1.940" />
+    <None Include="InputFiles\ImportFiles\File10.940" />
+    <None Include="InputFiles\ImportFiles\File2.940" />
+    <None Include="InputFiles\ImportFiles\File3.940" />
+    <None Include="InputFiles\ImportFiles\File4.940" />
+    <None Include="InputFiles\ImportFiles\File5.940" />
+    <None Include="InputFiles\ImportFiles\File6.940" />
+    <None Include="InputFiles\ImportFiles\File7.940" />
+    <None Include="InputFiles\ImportFiles\File8.940" />
+    <None Include="InputFiles\ImportFiles\File9.940" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\ScenarioDataList.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Config\TableTypeSettings.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RTMonitor\Properties\DataSources\RTMonitor.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RTMonitor\RTMonitor.dll" />
+    <Content Include="RTMonitor\System.Data.DataSetExtensions.dll" />
+    <Content Include="RTMonitor\System.Data.DataSetExtensions.xml" />
+    <Content Include="RTMonitor\VSTSMonitor.exe" />
+    <Content Include="RTMonitor\VSTSMonitor.pdb" />
+    <Content Include="RTMonitor\VSTSMonitor.vshost.exe" />
+    <Content Include="XMLInputDataFiles\CreateTransactionData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="XMLInputDataFiles\ReadTransactionData.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
